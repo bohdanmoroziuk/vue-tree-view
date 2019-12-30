@@ -1,12 +1,20 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <TreeView :node="node" />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { Node } from "@/types/node";
 
-@Component
+import TreeView from "@/components/TreeView.vue";
+
+@Component({
+  components: {
+    TreeView
+  }
+})
 export default class App extends Vue {
   node: Node = {
     name: "vue-tree-view",
