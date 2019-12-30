@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app" id="app">
     <TreeView :node="node" />
   </div>
 </template>
