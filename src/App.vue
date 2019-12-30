@@ -1,6 +1,8 @@
 <template>
-  <div class="app" id="app">
-    <TreeView :node="node" />
+  <div class="App" id="app">
+    <aside class="App-sidebar">
+      <TreeView :node="node" />
+    </aside>
   </div>
 </template>
 
@@ -69,3 +71,26 @@ export default class App extends Vue {
 }
 </script>
 
+<style scoped>
+.App {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #333;
+}
+
+.App-sidebar {
+  height: 100%;
+  max-width: 25%;
+  overflow: auto;
+  padding: 0.25rem 0.5rem;
+  background-color: #333;
+  color: #fff;
+}
+
+@media (min-width: 1370px) {
+  .App-sidebar {
+    max-width: 15%;
+  }
+}
+</style>
