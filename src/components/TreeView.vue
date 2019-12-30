@@ -68,6 +68,14 @@ export default class TreeView extends Vue {
 .TreeView-node {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.TreeView-node:hover {
+  background-color: #555;
 }
 
 .TreeView-nodeIcon {
