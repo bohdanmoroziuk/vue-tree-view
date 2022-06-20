@@ -17,27 +17,27 @@
 </template>
 
 <script lang="ts">
-import { Vue, Prop, Component } from "vue-property-decorator";
-import { Node } from "@/types/node";
+import { Vue, Prop, Component } from 'vue-property-decorator';
+import { Node } from '@/types/node';
 
 @Component
 export default class TreeView extends Vue {
   // Props
 
   @Prop()
-  readonly node!: Node;
+  public readonly node!: Node;
 
   @Prop({
     default: 1,
-    validator: (value: number): boolean => value >= 0
+    validator: (value: number): boolean => value >= 0,
   })
-  readonly depth!: number;
+  public readonly depth!: number;
 
   // Data
 
-  expended: boolean = false;
+  public expended: boolean = false;
 
-  offsetStep: number = 12;
+  public offsetStep: number = 12;
 
   // Computed
 
@@ -46,7 +46,7 @@ export default class TreeView extends Vue {
   }
 
   get childrenStyle() {
-    return { "margin-left": `${this.offsetStep * this.depth}px` };
+    return { 'margin-left': `${this.offsetStep * this.depth}px` };
   }
 
   get hasChildren(): boolean {
@@ -54,11 +54,11 @@ export default class TreeView extends Vue {
   }
 
   get nodeIcon(): string {
-    return this.expended ? "&#9660;" : "&#9658;";
+    return this.expended ? '&#9660;' : '&#9658;';
   }
 
   // Methods
-  toggle() {
+  public toggle() {
     this.expended = !this.expended;
   }
 }

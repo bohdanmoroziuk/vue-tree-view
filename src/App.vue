@@ -7,66 +7,66 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { Node } from "@/types/node";
+import { Component, Vue } from 'vue-property-decorator';
+import { Node } from '@/types/node';
 
-import TreeView from "@/components/TreeView.vue";
+import TreeView from '@/components/TreeView.vue';
 
 @Component({
   components: {
-    TreeView
-  }
+    TreeView,
+  },
 })
 export default class App extends Vue {
-  node: Node = {
-    name: "vue-tree-view",
+  public node: Node = {
+    name: 'vue-tree-view',
     children: [
       {
-        name: "public",
+        name: 'public',
         children: [
           {
-            name: "index.html"
+            name: 'index.html',
           },
           {
-            name: "favicon.ico"
-          }
-        ]
+            name: 'favicon.ico',
+          },
+        ],
       },
       {
-        name: "src",
+        name: 'src',
         children: [
           {
-            name: "assets",
+            name: 'assets',
             children: [
               {
-                name: "logo.png"
-              }
-            ]
+                name: 'logo.png',
+              },
+            ],
           },
           {
-            name: "components",
+            name: 'components',
             children: [
               {
-                name: "TreeView.vue"
-              }
-            ]
-          }
-        ]
+                name: 'TreeView.vue',
+              },
+            ],
+          },
+        ],
       },
       {
-        name: "test",
+        name: 'test',
         children: [
           {
-            name: "unit",
+            name: 'unit',
             children: [
               {
-                name: "example.spec.ts"
-              }
-            ]
-          }
-        ]
-      }
-    ]
+                name: 'example.spec.ts',
+              },
+            ],
+          },
+        ],
+      },
+    ],
   };
 }
 </script>
