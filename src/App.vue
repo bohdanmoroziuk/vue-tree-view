@@ -81,7 +81,8 @@ export default class App extends Vue {
 
 .App-sidebar {
   height: 100%;
-  max-width: 25%;
+  max-width: 30%;
+  width: 100%;
   overflow: auto;
   padding: 0.25rem 0.5rem;
   background-color: #333;
@@ -90,7 +91,7 @@ export default class App extends Vue {
 
 @media (min-width: 1370px) {
   .App-sidebar {
-    max-width: 15%;
+    max-width: 20%;
   }
 }
 </style>
