@@ -1,4 +1,10 @@
-# vue-tree-view
+# Vue Tree View
+
+> An example of a tree view component created using Vue and Typescript.
+
+## Preview
+
+<img src="./screenshots/vue-tree-view.png" alt="Vue Tree View" />
 
 ## Project setup
 ```
@@ -29,6 +35,3 @@ npm run lint
 ```
 npm run test:unit
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
